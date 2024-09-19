@@ -25,7 +25,7 @@ regsvr32.exe -u .\Redemption_64.dll
 
 Then use [ILMerge](https://github.com/dotnet/ILMerge) to create a single binary:
 ```
-.\ILMerge.exe /target:pwnlook35.exe /out:pwnlook.exe pwnlook35.exe Newtonsoft.Json.dll
+.\ILMerge.exe /target:pwnlook481.exe /out:pwnlook.exe pwnlook481.exe Newtonsoft.Json.dll
 ```
 
 ### How it works
