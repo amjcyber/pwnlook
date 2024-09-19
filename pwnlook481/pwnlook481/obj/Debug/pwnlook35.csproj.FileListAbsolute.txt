@@ -1,0 +1,12 @@
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\pwnlook35.csproj.AssemblyReference.cache
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\Interop.Redemption.dll
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\pwnlook35.csproj.ResolveComReference.cache
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\pwnlook35.csproj.CoreCompileInputs.cache
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\bin\Debug\pwnlook35.exe
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\bin\Debug\pwnlook35.pdb
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\pwnlook35.csproj.Up2Date
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\pwnlook35.exe
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\obj\Debug\pwnlook35.pdb
+C:\Users\bob\source\repos\pwnlook35\pwnlook35\bin\Debug\pwnlook35.exe.config

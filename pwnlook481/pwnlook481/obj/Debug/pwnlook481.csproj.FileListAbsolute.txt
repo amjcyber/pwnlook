@@ -1,0 +1,12 @@
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\bin\Debug\pwnlook481.exe.config
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\bin\Debug\pwnlook481.exe
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\bin\Debug\pwnlook481.pdb
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\pwnlook481.csproj.AssemblyReference.cache
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\Interop.Redemption.dll
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\pwnlook481.csproj.ResolveComReference.cache
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\pwnlook481.csproj.CoreCompileInputs.cache
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\pwnlook481.csproj.Up2Date
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\pwnlook481.exe
+C:\Users\bob\source\repos\pwnlook481\pwnlook481\obj\Debug\pwnlook481.pdb
