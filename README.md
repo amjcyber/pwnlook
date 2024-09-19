@@ -23,6 +23,11 @@ regsvr32.exe -u .\Redemption.dll
 regsvr32.exe -u .\Redemption_64.dll
 ```
 
+Then use [ILMerge](https://github.com/dotnet/ILMerge) to create a single binary:
+```
+.\ILMerge.exe /target:pwnlook35.exe /out:pwnlook.exe pwnlook35.exe Newtonsoft.Json.dll
+```
+
 ### How it works
 `pwnlook` communicates with Outlook via COM. By using the [Redemption library](https://www.dimastr.com/redemption/home.htm) it can gather all kind of information without triggering any alert to the user, even if you read an unread email the email will keep as unread for the user.
 
@@ -111,6 +116,7 @@ IPM_SUBTREE
 ```
 .\pwnlook.exe -mailbox "test_1@domaintest.tld" -folder "Inbox\test1" -latest 3 -json
 ```
+
 Output example in JSON:
 ```
   {
@@ -139,6 +145,7 @@ Output example in JSON:
 ```
 
 **Read email**
+
 Use the `ID` to read the email:
 ```
 .\pwnlook.exe -mailbox test_1@domaintest.tld -folder "test2" -read "0000000057C2BFB33842564EBEE8060D4BBE7C4A0700FCDA005631565E4A933C1CF9DF307DD50000000000110000FCDA005631565E4A933C1CF9DF307DD50000000016000000" -json
@@ -170,7 +177,9 @@ The attachment is encoded in `base64`, you can dump it as a file with Powershell
 ```
 
 ### Detect
+
 In your EDR you can search for processes accessing `OST` files.
+
 In Cortex XDR would be like:
 
 ```
