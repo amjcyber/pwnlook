@@ -1,6 +1,6 @@
 # pwnlook
 Pwnlook is an offensive postexploitation tool that will give you complete control over the Outlook desktop application and therefore to the emails configured in it.
-What it offers:
+What it does:
 - List mailboxes
 - List folders
 - Gather emails information
@@ -8,7 +8,9 @@ What it offers:
 - Search by recipient or subject
 - Download attachments
 
-It's possible to do almost everything that Outlook can do: send emails, create forward rules, list contacts... But all this is out of the scope of this project.
+It's possible to do almost everything that Outlook can do: send emails, create forward rules, list contacts... But all this is out of the scope of this project. **At the end of the this `README` you will find some detection techniques**.
+
+Pwnlook is written in .NET 4.8
 
 ## Compile
 To compile it you need first to register both DLLs. This is only for compilation, there is no need to register the DLL where you execute it:
@@ -22,6 +24,7 @@ You can unregister them later:
 regsvr32.exe -u .\Redemption.dll
 regsvr32.exe -u .\Redemption64.dll
 ```
+Open the `.sln` with Visual Studio and compile it. 
 
 Then use [ILMerge](https://github.com/dotnet/ILMerge) to create a single binary:
 ```
@@ -178,7 +181,7 @@ The attachment is encoded in `base64`, you can dump it as a file with Powershell
 
 ## Detect
 
-In your EDR you can search for processes accessing `OST` files.
+In your EDR you can search for unsigned processes accessing `OST` files.
 
 In Cortex XDR would be like:
 
