@@ -195,7 +195,7 @@ config case_sensitive = false
 
 Sigma rule:
 ```yml
-title: Access to OST files by uncommon process
+title: Access to OST files from uncommon process
 id: 0ea56b07-0bc6-4c8b-8b8a-e32de0557a5e
 status: experimental
 description: |
