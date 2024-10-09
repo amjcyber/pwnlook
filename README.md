@@ -10,8 +10,8 @@ What it offers:
 
 It's possible to do almost everything that Outlook can do: send emails, create forward rules, list contacts... But all this is out of the scope of this project.
 
-### Compile
-To compile it you need first to register both DLLs:
+## Compile
+To compile it you need first to register both DLLs. This is only for compilation, there is no need to register the DLL where you execute it:
 ```
 regsvr32.exe .\Redemption.dll
 regsvr32.exe .\Redemption64.dll
@@ -20,7 +20,7 @@ regsvr32.exe .\Redemption64.dll
 You can unregister them later:
 ```
 regsvr32.exe -u .\Redemption.dll
-regsvr32.exe -u .\Redemption_64.dll
+regsvr32.exe -u .\Redemption64.dll
 ```
 
 Then use [ILMerge](https://github.com/dotnet/ILMerge) to create a single binary:
@@ -28,12 +28,12 @@ Then use [ILMerge](https://github.com/dotnet/ILMerge) to create a single binary:
 .\ILMerge.exe /target:pwnlook481.exe /out:pwnlook.exe pwnlook481.exe Newtonsoft.Json.dll
 ```
 
-### How it works
+## How it works
 `pwnlook` communicates with Outlook via COM. By using the [Redemption library](https://www.dimastr.com/redemption/home.htm) it can gather all kind of information without triggering any alert to the user, even if you read an unread email the email will keep as unread for the user.
 
 The tool comes with some limitations that are related with the, most likely, possibility of dealing with very big OST files. Thats why, for example, I didn't implement an option to "list all emails".
 
-The `Redemption64.dll` must be in the same path as the `pwnlook.exe`. There is no need to register the DLL ([Registry free COM](https://www.dimastr.com/redemption/security.htm#redemptionloader)) so you can run it on behalf of any user, even if it is no Local Admin.
+The `Redemption64.dll` must be in the same path as the `pwnlook.exe`. There is no need to register the DLL ([Registry free COM](https://www.dimastr.com/redemption/security.htm#redemptionloader)) so you can run it on behalf of any user, even if it isn't Local Admin.
 
 ```powershell
 .\pwnlook.exe --help
@@ -77,7 +77,7 @@ Examples:
 .\pwnlook.exe -mailbox my@mail.com -folder "Inbox" -latest 20 -json        Lists latest 20 emails from Inbox
 ```
 
-#### List Mailboxes
+### List Mailboxes
 First you must list the existing mailboxes `.\pwnlook.exe -listmailboxes`:
 ```
 Available Mailboxes:
@@ -85,7 +85,7 @@ Available Mailboxes:
     - test_2@domaintest.tld
 ```
 
-#### List existing folders
+### List existing folders
 `.\pwnlook.exe -mailbox "test_1@domaintest.tld" -listfolders`
 
 ```
@@ -111,7 +111,7 @@ IPM_SUBTREE
     test2
 ```
 
-#### Examples
+### Examples
 **List latest 3 emails from test1 folder**
 ```
 .\pwnlook.exe -mailbox "test_1@domaintest.tld" -folder "Inbox\test1" -latest 3 -json
@@ -176,7 +176,7 @@ The attachment is encoded in `base64`, you can dump it as a file with Powershell
 [System.IO.File]::WriteAllBytes("outputFile.pdf", [System.Convert]::FromBase64String([System.IO.File]::ReadAllText("base64.txt")))
 ```
 
-### Detect
+## Detect
 
 In your EDR you can search for processes accessing `OST` files.
 
