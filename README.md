@@ -10,7 +10,7 @@ What it does:
 
 It's possible to do almost everything that Outlook can do: send emails, create forward rules, list contacts... But all this is out of the scope of this project. **At the end of the this `README` you will find some detection techniques**.
 
-Pwnlook is written in .NET 4.8
+Pwnlook is written in .NET 4.8.1
 
 ## Compile
 To compile it you need first to register both DLLs. This is only for compilation, there is no need to register the DLL where you execute it:
